@@ -2,8 +2,8 @@ FROM debian:buster-slim
 ARG hver=1.15 # HTSLIB and BCFTOOLS version
 RUN apt-get update && \
   apt-get upgrade -y && \
-  apt-get install -y make wget unzip git g++ zlib1g-dev bwa samtools msitools cabextract \
-  mono-devel libgdiplus libicu-dev libbz2-dev libssl-dev liblzma-dev libcurl4-openssl-dev \
+  apt-get install -y make wget unzip git g++ zlib1g-dev bwa samtools \
+  libgdiplus libicu-dev libbz2-dev libssl-dev liblzma-dev libcurl4-openssl-dev \
   autoconf libdeflate-dev 
 RUN wget https://github.com/samtools/htslib/releases/download/$hver/htslib-$hver.tar.bz2 && \
   mkdir htslib && \
